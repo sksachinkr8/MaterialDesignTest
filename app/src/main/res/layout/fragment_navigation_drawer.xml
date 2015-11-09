@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sachinkumar.materialdesigntest.NavigationDrawerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/containerDrawerImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+    <ImageView
+        android:layout_marginTop="@dimen/app_bar_padding_top"
+        android:layout_width="300dp"
+        android:layout_height="140dp"
+        android:src="@drawable/ic_abstract"
+        android:layout_marginBottom="16dp"/>
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/containerDrawerImage"
+        android:id="@+id/drawer_list"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>
