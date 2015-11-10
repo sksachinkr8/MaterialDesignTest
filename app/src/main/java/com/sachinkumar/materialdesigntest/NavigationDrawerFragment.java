@@ -160,6 +160,12 @@ public class NavigationDrawerFragment extends Fragment implements NavAdapter.Cli
             case 3: startActivity(new Intent(getActivity(), SubActivity.class));
                 view.setSelected(true);
                 break;
+            case 7: Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_SEND);
+                intent.putExtra("message", "This is a message from my app");
+                intent.setType("text/plain");
+                startActivity(intent);
+                break;
         }
 
     }

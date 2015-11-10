@@ -98,9 +98,30 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            MyFragment myFragment = MyFragment.getInstance(position);
-            return myFragment;
+//            MyFragment myFragment = MyFragment.getInstance(position);
+//            return myFragment;
+            Fragment fragment = null;
+            switch (position) {
+                case 0: fragment = new SearchFragment();
+                    break;
+                case 1: fragment = new Exclusive();
+                    break;
+                case 2: fragment = new Nearby();
+                    break;
+                case 3: fragment = new Trending();
+                    break;
+                case 4: fragment = new Feeds();
+                    break;
+            }
+            return fragment;
         }
+
+
+        @Override
+        public int getCount() {
+            return 5;
+        }
+
 
         //Use spannable to style normal text along with images or icons
         @Override
@@ -115,10 +136,7 @@ public class MainActivity extends AppCompatActivity {
             return spannableString;
         }
 
-        @Override
-        public int getCount() {
-            return 5;
-        }
+
     }
 
 
