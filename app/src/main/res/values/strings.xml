@@ -8,6 +8,11 @@
 
     <string name="drawerOpen">Open</string>
     <string name="drawerClose">Close</string>
+    <string name="error_timeout">Connection Timed Out</string>
+    <string name="error_auth">Account Authorisation Failed</string>
+    <string name="error_server">Server Error</string>
+    <string name="error_network">Network Error</string>
+    <string name="error_parse">Data is not readable</string>
 
     <string-array name="tabs">
         <item>Search</item>

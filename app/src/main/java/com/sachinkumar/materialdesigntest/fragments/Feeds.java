@@ -1,10 +1,12 @@
-package com.sachinkumar.materialdesigntest;
+package com.sachinkumar.materialdesigntest.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.sachinkumar.materialdesigntest.R;
 
 /**
  * Created by sachinkumar on 09/11/15.

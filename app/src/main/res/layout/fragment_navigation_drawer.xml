@@ -5,28 +5,57 @@
     tools:context="com.sachinkumar.materialdesigntest.NavigationDrawerFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/containerDrawerImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white">
 
-    <ImageView
-        android:layout_marginTop="@dimen/app_bar_padding_top"
-        android:layout_width="300dp"
-        android:layout_height="140dp"
-        android:src="@drawable/ic_abstract"
-        android:layout_marginBottom="16dp"/>
+        <ImageView
+            android:layout_marginTop="@dimen/app_bar_padding_top"
+            android:layout_width="300dp"
+            android:layout_height="140dp"
+            android:src="@drawable/ic_abstract"
+            android:layout_marginBottom="16dp"/>
 
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_account_circle_black_24dp" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/userName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/userImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:text="Sachin Kumar"/>
+
+        <TextView
+            android:id="@+id/userData"
+            android:layout_marginLeft="16dp"
+            android:layout_below="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:text="12 Review, 14 Followers"/>
+
+    </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
         android:layout_below="@+id/containerDrawerImage"
         android:id="@+id/drawer_list"
         android:layout_height="wrap_content"
         android:layout_width="match_parent" >
-
     </android.support.v7.widget.RecyclerView>
 
 

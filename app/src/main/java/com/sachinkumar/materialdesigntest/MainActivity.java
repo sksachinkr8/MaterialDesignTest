@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.sachinkumar.materialdesigntest.fragments.Exclusive;
+import com.sachinkumar.materialdesigntest.fragments.MyFragment;
+import com.sachinkumar.materialdesigntest.fragments.SearchFragment;
+import com.sachinkumar.materialdesigntest.fragments.Trending;
 import com.sachinkumar.materialdesigntest.tabs.SlidingTabLayout;
 
 
@@ -30,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
@@ -85,9 +91,10 @@ public class MainActivity extends AppCompatActivity {
 
     //Adapter to get fragment for setViewPager
 
-    class MyPagerAdapter extends FragmentPagerAdapter {
+    class MyPagerAdapter extends FragmentStatePagerAdapter {
 
-        int[] icons = {R.drawable.ic_search_white_24dp, R.drawable.ic_local_activity_white_24dp, R.drawable.ic_location_on_white_24dp, R.drawable.ic_trending_up_white_24dp, R.drawable.ic_view_stream_white_24dp };
+        int[] icons = {R.drawable.ic_search_white_24dp, R.drawable.ic_local_activity_white_24dp, R.drawable.ic_trending_up_white_24dp };
+//        int[] icons = {R.drawable.ic_search_white_24dp, R.drawable.ic_local_activity_white_24dp, R.drawable.ic_location_on_white_24dp, R.drawable.ic_trending_up_white_24dp, R.drawable.ic_view_stream_white_24dp };
 
         private String[] tabs = getResources().getStringArray(R.array.tabs);
 
@@ -106,12 +113,12 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 1: fragment = new Exclusive();
                     break;
-                case 2: fragment = new Nearby();
+//                case 2: fragment = new Nearby();
+//                    break;
+                case 2: fragment = new Trending();
                     break;
-                case 3: fragment = new Trending();
-                    break;
-                case 4: fragment = new Feeds();
-                    break;
+//                case 4: fragment = new Feeds();
+//                    break;
             }
             return fragment;
         }
@@ -119,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 5;
+            return 3;
         }
 
 
@@ -138,6 +145,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 
 }
